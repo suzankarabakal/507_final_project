@@ -3,7 +3,7 @@
 URL for Data: https://api.themoviedb.org/3
 URL for Documentation: https://developer.themoviedb.org/reference/intro/getting-started
 
-I will note that the TMDB documentation is not good. I mostly figured out how to use it by Googling things and reading the forums.
+I will note that the TMDB documentation is not very good. I mostly figured out how to use it by Googling things and reading the forums.
 
 ## Format(s): 
 Data is retrieved in JSON format.
@@ -15,6 +15,10 @@ The data from TMDB is accessed using HTTP requests made to their API endpoints. 
 /person/{actorID}/movie_credits
 /movie/{movieID}
 /movie/{movieID}/credits
+
+Each of these endpoints also need the api key parameter added to it with api_key={api_key} stuck on the end. 
+
+/search/person also needs the additional parameter of the person's name you are searching as a string with query={name} stuck on the end after the api key.
 
 The Python requests library is used to send requests and retrieve data. I didn't cache the data.
 
